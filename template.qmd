@@ -1,0 +1,15 @@
+---
+title: Template
+author: Last First
+embed-resources: true
+format:
+  edin-revealjs:
+    transition: fade
+    transition-speed: slow
+    slide-number: true
+    mermaid:
+      theme: default
+---
+
+
+## Slides

@@ -1,0 +1,221 @@
+/*-- scss:defaults --*/
+@import url(https://fonts.googleapis.com/css?family=Itim&family=Roboto+Slab:300,700);
+$font-family-sans-serif: "Fira Sans", "Roboto", "Droid Serif", serif !default;
+$title-font-size: 3vw !default;
+$title-font-weight: 500 !default;
+$subtitle-font-size: 2vw !default;
+$author-font: 'Itim', cursive;
+$author-font-size: 1vw !default;
+$date-font-size: 1vw !default;
+
+
+$body-bg: #f1efef !default;
+$body-color: #000000 !default;
+$presentation-heading-color: #a50101 !default;
+$link-color: darken($presentation-heading-color, 15%);
+$code-color: #EB7246 !default;
+$dark-bg-code-color: lighten($code-color, 15%) !default;
+$light-bg-code-color: darken($code-color, 15%) !default;
+$logo-size: 20%;
+$logo-pos: center center;
+
+
+$bar-height: 14vh;
+
+@function bh($value) {
+	@return $bar-height * $value;
+}
+/*-- scss:rules --*/
+
+// DEFAULT
+// .quarto-light {
+//     background-image: $top-logo;
+//     background-size: $logo-size;
+//     background-repeat: no-repeat;
+//     background-position: $logo-pos;
+// }
+
+// .quarto-dark {
+//     background-image: $top-logo;
+//     background-size: $logo-size;
+//     background-repeat: no-repeat;
+//     background-position: $logo-pos;
+// }
+
+.reveal .slide-number {
+    bottom: 10px !important;
+    right: 10px !important;
+    top: unset !important;
+    color: $body-color !important;
+}
+
+.reveal .progress {
+	color: $code-color;
+}
+
+.reveal > .backgrounds {
+    z-index: -1;
+}
+
+// TITLE SLIDE
+.reveal .slide-background.quarto-title-block {
+    background-color: white;
+    background-repeat: no-repeat;
+}
+
+.reveal .slides>section,
+.reveal .slides>section>section {
+    padding: 0;
+}
+
+#title-slide {
+
+    .title, .subtitle, .institute, .quarto-title-authors, .date {
+        color: #ffffff !important;
+        text-shadow: none;
+        text-align: left;
+    }
+
+    .title {
+        margin-top: 30%;
+        font-weight: $title-font-weight;
+        font-size: $title-font-size;
+    }
+
+    .subtitle {
+        font-size: $subtitle-font-size;
+    }
+
+    .quarto-title-authors {
+        font-size: $author-font-size;
+        font-family: $author-font;
+        text-align: right;
+        display: block;
+    }
+}
+
+// TRANSITION SLIDES
+.reveal .slide-background.slide.level1 {
+    background-color: $body-bg;
+}
+
+.reveal .slide.level1 > h1 {
+    position: relative;
+    font-size:larger;
+    top: 200px;
+    color: whitesmoke;
+}
+
+.reveal .slides {
+    color: #333333; /* Replace with your desired color */
+}
+
+.reveal .slides h3, .reveal .slides h4, .reveal .slides h5 {
+    color: #3122bd; /* 更改为你需要的颜色 */
+}
+
+.reveal table {
+    margin: auto;
+    border-collapse: collapse;
+    border-spacing: 0; }
+
+  .reveal table th {
+    font-weight: bold; }
+
+  .reveal table th,
+  .reveal table td {
+    text-align: left;
+    padding: 0.2em 0.5em 0.2em 0.5em;
+    border-bottom: 1px solid; }
+
+  .reveal table th[align="center"],
+  .reveal table td[align="center"] {
+    text-align: center; }
+
+  .reveal table th[align="right"],
+  .reveal table td[align="right"] {
+    text-align: right; }
+
+  .reveal table tbody tr:last-child th,
+  .reveal table tbody tr:last-child td {
+    border-bottom: none; }
+
+
+
+
+
+/*-----------------below is customised elements   */
+
+.reveal .slides .miner {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.reveal .slides .miner-name {
+    text-orientation: mixed;
+    margin-right: 10px;
+    font-size: 20px;
+}
+.reveal .slides .blocks {
+    display: flex;
+}
+.reveal .slides .block {
+    width: 120px;
+    height: 70px;
+    background-color: #e9eef2;
+    border: 2px solid #798ca4;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+.reveal .slides .block:last-child {
+    margin-right: 0;
+}
+
+.reveal .slides .emoji-block {
+
+    @extend .block;
+    border-radius: 10px; /* Added to make the block have round corners */
+    margin-top: 10px;
+}
+
+.reveal .slides .invi-block {
+
+    @extend .emoji-block;
+    background-color: #e9eef200;
+    border: 2px solid #798ca400;
+}
+
+.math.inline {
+    font-size: 100% !important;
+}
+
+.smaller .math.inline {
+    font-size: 80% !important;
+}
+
+.MathJax,
+.MathJax_Display {
+    margin-top: -10%;
+    margin-bottom: -10%;
+    font-size: 100% !important;
+}
+
+.math.display .MathJax {
+    color: #3f5fc7;
+
+}
+
+
+/* Background for the first slide */
+// .reveal .slides .lec-title-slide {
+//     background-image: $top-logo;
+//     background-size: 20%;
+//     background-color: aliceblue;
+//     background-position: right top;
+//     background-repeat: no-repeat;
+//     z-index: -1; /* Ensure the background is behind other content */
+// }
+
+
+
