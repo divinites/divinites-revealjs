@@ -1,0 +1,108 @@
+
+:root {
+    --top-logo: url("https://raw.githubusercontent.com/divinites/divinites-revealjs/main/imgs/top-logo.svg");
+    --bottom-logo: url("https://raw.githubusercontent.com/divinites/divinites-revealjs/main/imgs/bottom-logo.svg");
+    --top-bar: url("https://raw.githubusercontent.com/divinites/divinites-revealjs/main/imgs/bar.svg");
+    --img-red-line2: url("https://raw.githubusercontent.com/divinites/divinites-revealjs/main/imgs/overlay.svg");
+    --bottom-bar: url("https://raw.githubusercontent.com/divinites/divinites-revealjs/main/imgs/bar.svg");
+    --overlay: url("https://raw.githubusercontent.com/divinites/divinites-revealjs/main/imgs/overlay.svg");
+    --custom-background: url("https://raw.githubusercontent.com/divinites/divinites-revealjs/main/imgs/ai2p.jpg");
+   }
+
+
+
+.reveal .slide-background.quarto-title-block {
+    background-color: white;
+    background-image: var(--top-logo), var(--top-bar), var(--bottom-bar), var(--overlay), var(--custom-background);
+    background-size: 30vh, auto 14vh, auto 14vh, auto 36vh, cover;
+    background-position: right top, center top, center bottom, center 84%, center 16vh;
+    background-repeat: no-repeat;
+}
+
+/* .reveal .slide-background.slide.level1 {
+    background-color:  white;
+    background-image: var(--top-logo), var(--top-bar), var(--bottom-bar), var(--overlay), var(--ai2-image);
+    background-size: 30vh, auto 14vh, auto 14vh, auto 36vh, cover;
+    background-position: right top, center top, center bottom, center 84%, center 16vh;
+    background-repeat: no-repeat;
+} */
+
+.blockchain {
+    display: flex;
+    align-items: center;
+  }
+
+  .chain-block {
+    width: 100px;
+    height: 60px;
+    background-color: #f0f0f0;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    margin-right: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 18px;
+    position: relative;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .arrow {
+    margin-top: -5px;
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background-color: #999;
+  }
+
+  .arrow-right {
+    right: -40px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .arrow-right::after {
+    content: '';
+    position: absolute;
+    right: -8px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-left: 8px solid #999;
+  }
+
+  .fork-block {
+    position: relative;
+  }
+
+  .chain-fork {
+    position: absolute;
+    top: 100%;
+    left: calc(50px * var(--block-index));
+    transform: translateX(-50%);
+  }
+
+  .chain-fork .chain-block {
+    margin-top: 50px;
+    margin-left: calc(30px * var(--fork-block-index));
+  }
+
+  .chain-fork .arrow-down {
+    top: -25px;
+    left: calc(30px * var(--fork-block-index) + 15px -  8px * var(--fork-block-index) * var(--fork-block-index) );
+    transform: translateX(-50%) rotate(45deg);
+    width: 60px;
+  }
+
+  .chain-fork .arrow-down::after {
+    content: '';
+    position: absolute;
+    right: -8px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-left: 8px solid #999;
+  }

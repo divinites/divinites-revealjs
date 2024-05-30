@@ -1,7 +1,11 @@
 ---
 title: Template
 author: Last First
-embed-resources: true
+embed-resources: false
+execute:
+  echo: false
+  code-fold: true
+  cache: true
 format:
   edin-revealjs:
     transition: fade
@@ -9,6 +13,8 @@ format:
     slide-number: true
     mermaid:
       theme: default
+    header-includes: |
+          <link href="template.css" rel="stylesheet">
 ---
 
 
